@@ -151,7 +151,8 @@ aside {
     .user-feed-list button:hover {
       background: #F45D01;
       color: #fff;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all 0.5s; }
   .user-feed-list .rsvp-form .checkbox-wrapper {
     border: 1px solid #F45D01;
     border-radius: 50%;
@@ -161,17 +162,18 @@ aside {
     top: 5px;
     width: 20px; }
     .user-feed-list .rsvp-form .checkbox-wrapper div {
-      background: #F45D01;
       border-radius: 50%;
       height: 18px;
-      margin: 1px;
+      margin: 1.2px;
       width: 18px; }
       .user-feed-list .rsvp-form .checkbox-wrapper div:hover {
         cursor: pointer; }
+    .user-feed-list .rsvp-form .checkbox-wrapper div[aria-checked="true"] {
+      background: #F45D01; }
     .user-feed-list .rsvp-form .checkbox-wrapper div[aria-checked="false"] {
       background: none; }
   .user-feed-list .rsvp-form label {
-    margin-left: 5px; }
+    margin: 0 5px; }
   .user-feed-list .rsvp-form button {
     display: inline-block;
     margin-left: 5px;

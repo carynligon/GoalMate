@@ -73,6 +73,7 @@ aside {
       background: $primaryColor;
       color: $white;
       cursor: pointer;
+      transition: all 0.5s;
     }
   }
   .rsvp-form {
@@ -85,21 +86,23 @@ aside {
       top: 5px;
       width: 20px;
       div {
-        background: $primaryColor;
         border-radius: 50%;
         height: 18px;
-        margin: 1px;
+        margin: 1.2px;
         width: 18px;
         &:hover {
           cursor: pointer;
         }
+      }
+      div[aria-checked="true"] {
+        background: $primaryColor;
       }
       div[aria-checked="false"] {
         background: none;
       }
     }
     label {
-      margin-left: 5px;
+      margin: 0 5px;
     }
     button {
       display: inline-block;

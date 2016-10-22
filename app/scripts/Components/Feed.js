@@ -7,10 +7,12 @@ class Feed extends React.Component {
     this.state = {};
   }
   switchYes(e) {
-    this.setState({rsvp: 'yes'});
+    e.target.parentNode.nextSibling.nextSibling.children[0].setAttribute('aria-checked', false);
+    e.target.setAttribute('aria-checked', true)
   }
   switchNo(e) {
-    this.setState({rsvp: 'no'});
+    e.target.parentNode.previousSibling.previousSibling.children[0].setAttribute('aria-checked', false);
+    e.target.setAttribute('aria-checked', true)
   }
   render() {
     let yesChecked = false;
@@ -29,17 +31,17 @@ class Feed extends React.Component {
       let time = Moment(post.timestamp).from();
       let actions;
       if (post.type) {
-        if (post.type === 'tip') {
+        if (post.type === 'Tip') {
           actions = (<button className="like-btn">like</button>)
         } else {
           actions = (
             <form className="rsvp-form">
               <div className="checkbox-wrapper">
-                <div id="rsvp-yes" role="checkbox" aria-checked={yesChecked} onClick={this.switchYes.bind(this)}></div>
+                <div id="rsvp-yes" role="checkbox" onClick={this.switchYes.bind(this)}></div>
               </div>
               <label htmlFor="rsvp-yes">yes</label>
               <div className="checkbox-wrapper">
-                <div id="rsvp-yes" role="checkbox" aria-checked={noChecked} onClick={this.switchNo.bind(this)}></div>
+                <div id="rsvp-yes" role="checkbox" onClick={this.switchNo.bind(this)}></div>
               </div>
               <label htmlFor="rsvp-no">no</label>
               <button type="submit">submit</button>
@@ -49,7 +51,7 @@ class Feed extends React.Component {
       }
       return (
         <li key={i}>
-          <p>{post.content}</p>
+          <p>{post.comment}</p>
           <span className="post-time">{time}</span>
           <span className="post-user"> by {post.user_id}</span>
           {actions}
