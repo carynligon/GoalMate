@@ -94,6 +94,11 @@ aside {
   height: 100vh;
   text-align: center;
   width: 300px; }
+  aside h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0; }
+  aside p {
+    margin-top: 0; }
   aside .user-icon {
     background-repeat: no-repeat;
     background-size: contain;
@@ -118,6 +123,59 @@ aside {
         width: 50px; }
         aside .user-groups ul li:hover {
           cursor: pointer; }
+
+.user-feed-list {
+  box-sizing: border-box;
+  float: right;
+  padding: 2rem;
+  width: calc(100% - 300px); }
+  .user-feed-list li {
+    background: #f7f6f6;
+    border-bottom: 1px solid #ebe9e9;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 1rem 1rem 0.5rem 1rem; }
+    .user-feed-list li:first-child {
+      margin-top: 0; }
+    .user-feed-list li p {
+      font-size: 1.2rem;
+      margin: 0; }
+  .user-feed-list button {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #F45D01;
+    display: block;
+    margin-top: 5px;
+    padding: 0.2rem 0.5rem; }
+    .user-feed-list button:hover {
+      background: #F45D01;
+      color: #fff;
+      cursor: pointer; }
+  .user-feed-list .rsvp-form .checkbox-wrapper {
+    border: 1px solid #F45D01;
+    border-radius: 50%;
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    width: 20px; }
+    .user-feed-list .rsvp-form .checkbox-wrapper div {
+      background: #F45D01;
+      border-radius: 50%;
+      height: 18px;
+      margin: 1px;
+      width: 18px; }
+      .user-feed-list .rsvp-form .checkbox-wrapper div:hover {
+        cursor: pointer; }
+    .user-feed-list .rsvp-form .checkbox-wrapper div[aria-checked="false"] {
+      background: none; }
+  .user-feed-list .rsvp-form label {
+    margin-left: 5px; }
+  .user-feed-list .rsvp-form button {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0.5rem; }
 
 body {
   margin: 0; }
