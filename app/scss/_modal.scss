@@ -1,0 +1,55 @@
+.modal-content {
+  box-sizing: border-box;
+  padding: 3rem 1rem;
+  .login-form, .signup-form {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    h3 {
+      color: $white;
+      font-size: 2rem;
+      margin: 0;
+    }
+    .input-wrapper {
+      margin: 0 auto;
+      width: 200px;
+      label {
+        display: block;
+        font-size: 0.8rem;
+        margin: 10px 0 0 3px;
+        text-align: left;
+      }
+      input {
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem;
+        width: 100%;
+      }
+    }
+    button {
+      background: $white;
+      color: $primaryColor;
+      margin-top: 20px;
+      padding: 0.5rem 1rem;
+      &:hover {
+        background: darken($primaryColor, 5%);
+        color: $white;
+      }
+    }
+  }
+  .login-form {
+    padding-top: 14%;
+  }
+  .signup-form {
+    padding-top: 8%;
+    .input-wrapper {
+      width: 147px;
+    }
+    .signup-group1 {
+      float: left;
+    }
+    .signup-group2 {
+      display: inline-block;
+    }
+  }
+}

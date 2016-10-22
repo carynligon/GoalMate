@@ -45,6 +45,49 @@
   left: 0;
   width: 100%; }
 
+.modal-content {
+  box-sizing: border-box;
+  padding: 3rem 1rem; }
+  .modal-content .login-form, .modal-content .signup-form {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; }
+    .modal-content .login-form h3, .modal-content .signup-form h3 {
+      color: #fff;
+      font-size: 2rem;
+      margin: 0; }
+    .modal-content .login-form .input-wrapper, .modal-content .signup-form .input-wrapper {
+      margin: 0 auto;
+      width: 200px; }
+      .modal-content .login-form .input-wrapper label, .modal-content .signup-form .input-wrapper label {
+        display: block;
+        font-size: 0.8rem;
+        margin: 10px 0 0 3px;
+        text-align: left; }
+      .modal-content .login-form .input-wrapper input, .modal-content .signup-form .input-wrapper input {
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem;
+        width: 100%; }
+    .modal-content .login-form button, .modal-content .signup-form button {
+      background: #fff;
+      color: #F45D01;
+      margin-top: 20px;
+      padding: 0.5rem 1rem; }
+      .modal-content .login-form button:hover, .modal-content .signup-form button:hover {
+        background: #db5301;
+        color: #fff; }
+  .modal-content .login-form {
+    padding-top: 14%; }
+  .modal-content .signup-form {
+    padding-top: 8%; }
+    .modal-content .signup-form .input-wrapper {
+      width: 147px; }
+    .modal-content .signup-form .signup-group1 {
+      float: left; }
+    .modal-content .signup-form .signup-group2 {
+      display: inline-block; }
+
 body {
   margin: 0; }
 
