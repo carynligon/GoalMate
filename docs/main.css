@@ -1,3 +1,60 @@
+.home .title-wrapper {
+  background: rgba(0, 23, 31, 0.6);
+  border-radius: 15px;
+  color: #F45D01;
+  margin: 26vh auto;
+  padding: 5rem 2rem;
+  position: relative;
+  text-align: center;
+  width: 540px;
+  z-index: 1; }
+.home h1 {
+  font-size: 7rem;
+  font-weight: 300;
+  letter-spacing: 6px;
+  margin: 0; }
+  .home h1 span {
+    font-weight: 700; }
+.home h2 {
+  color: #fff;
+  margin: 0; }
+.home button {
+  background: rgba(0, 23, 31, 0.8);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  margin: 0.5rem;
+  padding: 1rem 1.5rem; }
+  .home button:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    color: #00171F; }
+.home .signup {
+  background: rgba(244, 93, 1, 0.8); }
+  .home .signup:hover {
+    backround: rgba(255, 255, 255, 0.8);
+    color: #F45D01; }
+.home img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%; }
 
+body {
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    list-style-type: none; }
 
 /*# sourceMappingURL=main.css.map */

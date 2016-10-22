@@ -1,0 +1,57 @@
+.home {
+  .title-wrapper {
+    background: rgba($black, 0.6);
+    border-radius: 15px;
+    color: $primaryColor;
+    margin: 26vh auto;
+    padding: 5rem 2rem;
+    position: relative;
+    text-align: center;
+    width: 540px;
+    z-index: 1;
+  }
+  h1 {
+    font-size: 7rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    margin: 0;
+    span {
+      font-weight: 700;
+    }
+  }
+  h2 {
+    color: $white;
+    margin: 0;
+  }
+  button {
+    background: rgba($black, 0.8);
+    border: none;
+    border-radius: 5px;
+    color: $white;
+    font-size: 1rem;
+    margin: 0.5rem;
+    padding: 1rem 1.5rem;
+    &:hover {
+      cursor: pointer;
+      background: rgba($white, 0.8);
+      color: $black;
+    }
+  }
+  .signup {
+    background: rgba($primaryColor, 0.8);
+    &:hover {
+      backround: rgba($white, 0.8);
+      color: $primaryColor;
+    }
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}
