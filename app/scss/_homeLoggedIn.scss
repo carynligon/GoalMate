@@ -4,6 +4,13 @@ aside {
   height: 100vh;
   text-align: center;
   width: 300px;
+  h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+  }
   .user-icon {
     background-repeat: no-repeat;
     background-size: contain;
@@ -32,6 +39,72 @@ aside {
           cursor: pointer;
         }
       }
+    }
+  }
+}
+.user-feed-list {
+  box-sizing: border-box;
+  float: right;
+  padding: 2rem;
+  width: calc(100% - 300px);
+  li {
+    background: $lightGray;
+    border-bottom: 1px solid darken($lightGray, 5%);
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 1rem 1rem 0.5rem 1rem;
+    &:first-child {
+      margin-top: 0;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
+  button {
+    background: $white;
+    border: none;
+    border-radius: 5px;
+    color: $primaryColor;
+    display: block;
+    margin-top: 5px;
+    padding: 0.2rem 0.5rem;
+    &:hover {
+      background: $primaryColor;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+  .rsvp-form {
+    .checkbox-wrapper {
+      border: 1px solid $primaryColor;
+      border-radius: 50%;
+      display: inline-block;
+      height: 20px;
+      position: relative;
+      top: 5px;
+      width: 20px;
+      div {
+        background: $primaryColor;
+        border-radius: 50%;
+        height: 18px;
+        margin: 1px;
+        width: 18px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      div[aria-checked="false"] {
+        background: none;
+      }
+    }
+    label {
+      margin-left: 5px;
+    }
+    button {
+      display: inline-block;
+      margin-left: 5px;
+      padding: 0.5rem;
     }
   }
 }

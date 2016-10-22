@@ -18,26 +18,26 @@ class HomeLoggedIn extends React.Component {
       userGroups: ['JavaScript', 'Yoga', 'Chinese', 'Cooking', 'JavaScript', 'Yoga', 'Chinese', 'Cooking'],
       userFeed: [
         {
-          comment: 'Something that will go in the feed!',
-          type: 'Tip',
-          user: 'Tom',
-          time: new Date()
+          content: 'Something that will go in the feed!',
+          type: 'tip',
+          user_id: 'Tom',
+          timestamp: new Date()
         },
         {
-          comment: 'Something that will go in the feed!',
-          type: 'Event',
-          user: 'Tommy',
-          time: new Date()
+          content: 'Something that will go in the feed!',
+          type: 'event',
+          user_id: 'Tommy',
+          timestamp: new Date()
         },
         {
-          comment: 'Something that will go in the feed!',
-          user: 'Tomison',
-          time: new Date()
+          content: 'Something that will go in the feed!',
+          user_id: 'Tomison',
+          timestamp: new Date()
         },
         {
-          comment: 'Something that will go in the feed!',
-          user: 'Tomithy',
-          time: new Date()
+          content: 'Something that will go in the feed!',
+          user_id: 'Tomithy',
+          timestamp: new Date()
         }
       ]
     })
