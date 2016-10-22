@@ -5,6 +5,9 @@ class Modal extends React.Component {
     super(props);
     this.state = {};
   }
+  closeModal() {
+    this.props.closeModal();
+  }
   containerStyles() {
     return ({
       position: 'fixed',
@@ -22,12 +25,13 @@ class Modal extends React.Component {
       height: '50%',
       width: '50%',
       background: '#F45D01',
-      margin: '25% auto'
+      margin: '20% auto'
     });
   }
   render() {
+    console.log(this.props);
     return (
-      <div className="modal-container" style={this.containerStyles()}>
+      <div className="modal-container" style={this.containerStyles()} onClick={this.closeModal.bind(this)}>
         <div className="modal-content" style={this.contentStyles()}>
         </div>
       </div>
