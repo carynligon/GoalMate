@@ -1,11 +1,12 @@
 import React from 'react';
 
 import Modal from '../Components/Modal';
+import HomeLoggedIn from './Home_LoggedIn';
 
 class Home extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {showModal: false};
+    this.state = {showModal: false, loggedIn: true};
   }
   closeModal() {
     this.setState({showModal: false});
@@ -17,16 +18,7 @@ class Home extends React.Component {
     this.setState({showModal: !this.state.showModal, login: false});
   }
   render () {
-    let modal;
-    if (this.state.showModal) {
-      if (this.state.login) {
-        modal = <Modal method='login' closeModal={this.closeModal.bind(this)}/>
-      } else {
-        modal = <Modal method="signup" closeModal={this.closeModal.bind(this)}/>
-      }
-    }
-    let random = Math.floor((Math.random() * 2));
-    return (
+    let content = (
       <main className="home">
         <div className="title-wrapper">
           <h1><span>Goal</span>Mate</h1>
@@ -38,6 +30,21 @@ class Home extends React.Component {
         <img src='/assets/images/notes.jpeg'/>
         {modal}
       </main>
+    );
+    let modal;
+    if (this.state.showModal) {
+      if (this.state.login) {
+        modal = <Modal method='login' closeModal={this.closeModal.bind(this)}/>
+      } else {
+        modal = <Modal method="signup" closeModal={this.closeModal.bind(this)}/>
+      }
+    }
+    if (this.state.loggedIn) {
+      content = <HomeLoggedIn/>
+    }
+    let random = Math.floor((Math.random() * 2));
+    return (
+      <div className="wrapper">{content}</div>
     )
   }
 }
