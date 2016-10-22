@@ -1,0 +1,37 @@
+aside {
+  background: $secondaryColor;
+  display: inline-block;
+  height: 100vh;
+  text-align: center;
+  width: 300px;
+  .user-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    margin: 3rem auto 1rem auto;
+    width: 100px;
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  .user-groups {
+    width: 80%;
+    margin: 0 auto;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        background: $white;
+        display: flex;
+        height: 50px;
+        margin-top: 10px;
+        width: 50px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

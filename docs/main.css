@@ -88,6 +88,37 @@
     .modal-content .signup-form .signup-group2 {
       display: inline-block; }
 
+aside {
+  background: #2D7DD2;
+  display: inline-block;
+  height: 100vh;
+  text-align: center;
+  width: 300px; }
+  aside .user-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    margin: 3rem auto 1rem auto;
+    width: 100px; }
+    aside .user-icon img {
+      height: 100px;
+      width: 100px; }
+  aside .user-groups {
+    width: 80%;
+    margin: 0 auto; }
+    aside .user-groups ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      aside .user-groups ul li {
+        background: #fff;
+        display: flex;
+        height: 50px;
+        margin-top: 10px;
+        width: 50px; }
+        aside .user-groups ul li:hover {
+          cursor: pointer; }
+
 body {
   margin: 0; }
 
