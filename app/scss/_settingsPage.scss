@@ -1,0 +1,68 @@
+.edit-settings-form {
+  background: $white;
+  margin: 1rem auto;
+  padding: 2rem 0;
+  text-align: center;
+  width: 500px;
+  h3 {
+    color: $black;
+    font-size: 2rem;
+    margin: 0;
+  }
+  label {
+    display: block;
+    font-size: 0.8rem;
+  }
+  #image-label {
+    background: $white;
+    border: 1px solid rgba($black, 0.2);
+    margin: 23px auto;
+    padding: 0.5rem;
+    width: 60%;
+    &:hover, &:active {
+      background: darken($primaryColor, 10%);
+      color: $white;
+      cursor: pointer;
+    }
+    p {
+      color: $white;
+      margin: 0;
+    }
+  }
+  #image-label.loaded {
+    background: darken($primaryColor, 10%);
+    color: $white;
+  }
+  div {
+    margin: 10px auto;
+    width: 90%;
+    &::first-child {
+      margin-top: 0;
+    }
+    input {
+      padding: 0.5rem;
+      width: 60%;
+      &:focus {
+        border: 1px solid rgba($black, 0.2);
+        outline: none;
+      }
+    }
+    input[type="file"] {
+      display: none;
+    }
+  }
+  button {
+    background: $white;
+    border: 1px solid $primaryColor;
+    box-sizing: border-box;
+    color: $primaryColor;
+    margin-top: 20px;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s;
+    &:hover {
+      background: darken($primaryColor, 5%);
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}
