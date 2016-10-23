@@ -66,3 +66,20 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .edit-settings-form {
+    width: 85%;
+    div {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .edit-settings-form {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
