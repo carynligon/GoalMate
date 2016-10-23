@@ -1,5 +1,7 @@
 import Backbone from 'backbone';
 
+import Post from '../Models/Post';
+
 export default Backbone.Collection.extend({
   url: ``,
   model: Post,
