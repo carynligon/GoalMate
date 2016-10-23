@@ -48,35 +48,37 @@
 .modal-content {
   box-sizing: border-box;
   padding: 3rem 1rem; }
-  .modal-content .login-form, .modal-content .signup-form {
+  .modal-content .login-form, .modal-content .signup-form, .modal-content .add-goal {
     width: 80%;
     margin: 0 auto;
     text-align: center; }
-    .modal-content .login-form h3, .modal-content .signup-form h3 {
+    .modal-content .login-form h3, .modal-content .signup-form h3, .modal-content .add-goal h3 {
       color: #fff;
       font-size: 2rem;
       margin: 0; }
-    .modal-content .login-form .input-wrapper, .modal-content .signup-form .input-wrapper {
+    .modal-content .login-form .input-wrapper, .modal-content .signup-form .input-wrapper, .modal-content .add-goal .input-wrapper {
       margin: 0 auto;
       width: 200px; }
-      .modal-content .login-form .input-wrapper label, .modal-content .signup-form .input-wrapper label {
+      .modal-content .login-form .input-wrapper label, .modal-content .signup-form .input-wrapper label, .modal-content .add-goal .input-wrapper label {
         display: block;
         font-size: 0.8rem;
         margin: 10px 0 0 3px;
         text-align: left; }
-      .modal-content .login-form .input-wrapper input, .modal-content .signup-form .input-wrapper input {
+      .modal-content .login-form .input-wrapper input, .modal-content .signup-form .input-wrapper input, .modal-content .add-goal .input-wrapper input {
         border: none;
         border-radius: 5px;
         padding: 0.5rem;
         width: 100%; }
-    .modal-content .login-form button, .modal-content .signup-form button {
+    .modal-content .login-form button, .modal-content .signup-form button, .modal-content .add-goal button {
       background: #fff;
+      border: none;
       color: #F45D01;
       margin-top: 20px;
       padding: 0.5rem 1rem; }
-      .modal-content .login-form button:hover, .modal-content .signup-form button:hover {
+      .modal-content .login-form button:hover, .modal-content .signup-form button:hover, .modal-content .add-goal button:hover {
         background: #db5301;
-        color: #fff; }
+        color: #fff;
+        cursor: pointer; }
   .modal-content .login-form {
     padding-top: 14%; }
   .modal-content .signup-form {
@@ -87,6 +89,8 @@
       float: left; }
     .modal-content .signup-form .signup-group2 {
       display: inline-block; }
+  .modal-content .add-goal {
+    padding-top: 22%; }
 
 aside {
   background: #2D7DD2;
@@ -250,8 +254,7 @@ nav {
   background: #f7f6f6;
   box-shadow: 3px 3px 3px rgba(0, 23, 31, 0.2);
   height: 100px;
-  padding: 0 2rem;
-  width: 100%; }
+  padding: 0 2rem; }
   nav a {
     color: #2D7DD2;
     font-size: 4rem;
@@ -265,23 +268,44 @@ nav {
     float: right;
     font-size: 1.5rem;
     line-height: 100px;
-    margin-right: 6%;
     vertical-align: middle; }
     nav .user-icon:hover {
       color: #2D7DD2;
       cursor: pointer; }
   nav .nav-dropdown {
     background: #f7f6f6;
+    height: 208px;
     position: absolute;
     right: 7px;
-    z-index: 5; }
+    z-index: 5;
+    animation: dropdown 0.3s ease-in-out; }
+    nav .nav-dropdown a {
+      color: #00171F;
+      text-decoration: none; }
+      nav .nav-dropdown a:hover {
+        color: #fff; }
     nav .nav-dropdown li {
-      border-bottom: 1px solid #c7c0c0;
-      padding: 1rem 3rem; }
+      border-bottom: 1px solid #dfdbdb;
+      font-size: 1rem;
+      line-height: 1rem;
+      padding: 1rem 3rem;
+      animation: dropdownLI 3s;
+      transition: all 0.5s; }
       nav .nav-dropdown li:hover {
         background: #F45D01;
+        color: #fff;
         cursor: pointer; }
 
+@keyframes dropdown {
+  from {
+    height: 0; }
+  to {
+    height: 208px; } }
+@keyframes dropdownLI {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 body {
   margin: 0; }
 
