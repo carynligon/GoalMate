@@ -36,7 +36,7 @@ class Nav extends React.Component {
     }
     return (
       <nav>
-        <Link to="/"><i className="fa fa-home" aria-hidden="true"></i></Link>
+        <Link to="/"><img src="/assets/images/logo.png"/><h4><span>Goal</span>Mate</h4></Link>
         <i className="fa fa-user user-icon" aria-hidden="true" onClick={this.dropdown.bind(this)}></i>
         {dropdown}
         {modal}

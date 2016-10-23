@@ -368,6 +368,19 @@ nav {
     vertical-align: middle; }
     nav a:hover {
       color: #F45D01; }
+    nav a img {
+      width: 75px;
+      margin-top: 12px; }
+    nav a h4 {
+      bottom: 31%;
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 200;
+      left: 2%;
+      letter-spacing: 1.5px;
+      position: relative; }
+      nav a h4 span {
+        font-weight: 700; }
   nav .user-icon {
     color: #F45D01;
     float: right;
