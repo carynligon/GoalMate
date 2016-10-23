@@ -14,10 +14,14 @@ class Feed extends React.Component {
     e.target.parentNode.previousSibling.previousSibling.children[0].setAttribute('aria-checked', false);
     e.target.setAttribute('aria-checked', true)
   }
+  newPost(e) {
+    e.preventDefault();
+  }
   render() {
     let yesChecked = false;
     let noChecked = false;
     let textBox;
+    let heading = 'What\'s happening:';
     if (this.state.rsvp) {
       if (this.state.rsvp === 'yes') {
         yesChecked = true;
@@ -52,7 +56,7 @@ class Feed extends React.Component {
       }
       if (this.props.newPosts) {
         textBox = (
-          <form className="new-post-form">
+          <form className="new-post-form" onSubmit={this.newPost.bind(this)}>
             <textarea placeholder="Know of an event or have any advice for other members?"></textarea>
             <input type="radio" id="type-tip" name="type" value="Tip" ref="tip"/>
             <label htmlFor="type-tip">Tip</label>
@@ -61,22 +65,28 @@ class Feed extends React.Component {
             <button type="submit">POST</button>
           </form>
         );
+        heading = 'What\'s happening in this group:'
       }
       return (
         <li key={i}>
           <p>{post.content}</p>
           <span className="post-time">{time}</span>
-          <span className="post-user"> by {post.user_id}</span>
+          <span className="post-user"> by {post.user}</span>
           {actions}
         </li>
       );
     });
     return (
-      <ul className="user-feed-list">
-        <h4>What's happening:</h4>
-        {textBox}
-        {feedItems}
-      </ul>
+      <div className="feed-wrapper">
+        <div className="group-banner">
+          <h2>{this.props.group.name}</h2>
+        </div>
+        <ul className="user-feed-list">
+            <h4>{heading}</h4>
+            {textBox}
+            {feedItems}
+        </ul>
+      </div>
     );
   }
 }

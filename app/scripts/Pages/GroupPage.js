@@ -18,16 +18,19 @@ class GroupPage extends React.Component {
         {
           content: 'Something to go in the feed here',
           type: 'tip',
+          user: 'Tom',
           timestamp: new Date()
         },
         {
           content: 'Something to go in the feed here',
           type: 'event',
+          user: 'Tommy',
           timestamp: new Date()
         },
         {
           content: 'Something to go in the feed here',
           type: 'tip',
+          user: 'Tomison',
           timestamp: new Date()
         }
       ]
@@ -38,7 +41,7 @@ class GroupPage extends React.Component {
       <main>
         <Nav/>
         <GroupSidebar group={this.state.group}/>
-        <Feed feed={this.state.feed} newPosts={true}/>
+        <Feed feed={this.state.feed} group={this.state.group} newPosts={true}/>
       </main>
     );
   }

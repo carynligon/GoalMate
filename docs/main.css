@@ -116,7 +116,7 @@
   .modal-content .signup-form .input-wrapper input {
     width: 85%; } }
 aside {
-  background: #2D7DD2;
+  background: #AAD922;
   display: inline-block;
   height: 100vh;
   text-align: center;
@@ -150,36 +150,49 @@ aside {
         background: #fff;
         border-radius: 5px;
         display: flex;
-        font-size: 0.8rem;
-        height: 50px;
+        font-size: 0.9rem;
+        height: 65px;
         justify-content: space-around;
         margin: 5px;
         overflow: hidden;
-        width: 50px; }
+        width: 65px; }
         aside .user-groups ul li:hover {
           cursor: pointer;
           opacity: 0.7; }
 
+.feed-wrapper {
+  float: right;
+  width: calc(100% - 300px); }
+  .feed-wrapper .group-banner {
+    background: #F45D01;
+    padding: 1rem 0; }
+    .feed-wrapper .group-banner h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      text-align: center; }
+
 .user-feed-list {
   box-sizing: border-box;
-  float: right;
-  padding: 2rem;
-  width: calc(100% - 300px); }
+  padding: 2rem; }
   .user-feed-list .new-post-form {
     width: 75%; }
     .user-feed-list .new-post-form textarea {
       border-radius: 5px;
       box-sizing: border-box;
       display: inline-block;
-      font-size: 0.9rem;
+      font-size: 1rem;
       padding: 0.5rem;
       width: 100%; }
       .user-feed-list .new-post-form textarea:focus {
         border: 4px solid #F45D01;
         outline: none; }
+    .user-feed-list .new-post-form label {
+      font-size: 1.2rem; }
     .user-feed-list .new-post-form button {
       background: #F45D01;
       color: #fff;
+      font-size: 1rem;
       padding: 0.5rem;
       display: inline-block;
       margin-left: 10px;
@@ -203,6 +216,7 @@ aside {
     border-radius: 5px;
     color: #F45D01;
     display: block;
+    font-size: 1rem;
     margin-top: 5px;
     padding: 0.2rem 0.5rem; }
     .user-feed-list button:hover {
@@ -245,9 +259,11 @@ aside {
       margin: 0 auto;
       width: 240px; }
 
-  .user-feed-list {
+  .feed-wrapper {
+    bottom: 5px;
+    position: relative;
     width: 100%; }
-    .user-feed-list .new-post-form {
+    .feed-wrapper .new-post-form {
       margin: 0 auto;
       text-align: center; } }
 @media (min-width: 1000px) {
@@ -260,6 +276,8 @@ aside {
   .user-feed-list {
     padding: 2rem 10%; } }
 .user-profile-info {
+  background: #AAD922;
+  box-shadow: 2px 3px 3px rgba(0, 23, 31, 0.3);
   padding-top: 3rem; }
   .user-profile-info .user-icon-wrapper {
     border-radius: 25%;
@@ -289,15 +307,10 @@ aside {
     .user-profile-info .user-info p {
       font-size: 1.3rem;
       margin-bottom: 0; }
-  .user-profile-info::after {
-    border-bottom: 1px solid #dfdbdb;
-    content: '';
-    display: block;
-    margin: 2rem auto 1rem auto;
-    width: 70%; }
 
 .profile-group-wrapper {
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  padding: 2rem 10%; }
   .profile-group-wrapper h5 {
     font-size: 2rem;
     margin: 0;
@@ -307,22 +320,23 @@ aside {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
-    width: 400px; }
+    width: 100%; }
     .profile-group-wrapper .profile-group-list a {
       color: #00171F;
       text-decoration: none; }
     .profile-group-wrapper .profile-group-list li {
       align-items: center;
-      background: #2D7DD2;
+      background: #F45D01;
       border-radius: 5px;
+      color: #fff;
       display: flex;
-      font-size: 0.8rem;
-      height: 50px;
+      font-size: 1rem;
+      height: 85px;
       justify-content: center;
       margin: 10px;
       overflow: hidden;
       text-align: center;
-      width: 50px; }
+      width: 85px; }
       .profile-group-wrapper .profile-group-list li:hover {
         cursor: pointer;
         opacity: 0.6; }

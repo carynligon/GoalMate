@@ -1,5 +1,7 @@
 import React from 'react';
 
+import store from '../store';
+
 class Modal extends React.Component {
   constructor(props) {
     super(props);
@@ -36,6 +38,7 @@ class Modal extends React.Component {
     let goal = {
       goal: this.refs.goal.value
     }
+    store.groups.newgoal(goal);
   }
   containerStyles() {
     return ({
@@ -54,7 +57,7 @@ class Modal extends React.Component {
       height: '50%',
       width: '450px',
       background: '#F45D01',
-      margin: '20% auto'
+      margin: '10vh auto'
     });
   }
   smallContentStyles() {

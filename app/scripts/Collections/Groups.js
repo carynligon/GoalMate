@@ -1,5 +1,7 @@
 import Backbone from 'backbone';
 
+import Group from '../Models/Group';
+
 export default Backbone.Collection.extend({
   url: ``,
   model: Group,
