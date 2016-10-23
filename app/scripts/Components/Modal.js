@@ -27,6 +27,12 @@ class Modal extends React.Component {
       password: this.refs.password.value
     }
   }
+  newGoal(e) {
+    e.preventDefault();
+    let goal = {
+      goal: this.refs.goal.value
+    }
+  }
   containerStyles() {
     return ({
       position: 'fixed',
@@ -110,6 +116,19 @@ class Modal extends React.Component {
           <button type="submit" id="login-submit">LOGIN</button>
         </form>
       );
+    } else if (this.props.method === 'add-goal') {
+      form = (
+        <form className="add-goal" onSubmit={this.newGoal.bind(this)}>
+          <h3>ADD GOAL</h3>
+
+          <div className="input-wrapper">
+          <label htmlFor="goal">GOAL</label>
+          <input type="text" id="goal" ref="goal" required/>
+          </div>
+
+          <button type="submit" id="goal-submit">ADD</button>
+        </form>
+      )
     }
     return (
       <div className="modal-container" style={this.containerStyles()} onClick={this.closeModal.bind(this)}>

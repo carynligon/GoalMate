@@ -1,7 +1,7 @@
 .modal-content {
   box-sizing: border-box;
   padding: 3rem 1rem;
-  .login-form, .signup-form {
+  .login-form, .signup-form, .add-goal {
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -28,12 +28,14 @@
     }
     button {
       background: $white;
+      border: none;
       color: $primaryColor;
       margin-top: 20px;
       padding: 0.5rem 1rem;
       &:hover {
         background: darken($primaryColor, 5%);
         color: $white;
+        cursor: pointer;
       }
     }
   }
@@ -51,5 +53,8 @@
     .signup-group2 {
       display: inline-block;
     }
+  }
+  .add-goal {
+    padding-top: 22%;
   }
 }
