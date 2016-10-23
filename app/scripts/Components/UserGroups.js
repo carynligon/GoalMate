@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class UserGroups extends React.Component {
   constructor(props) {
@@ -7,9 +8,9 @@ class UserGroups extends React.Component {
   render() {
     let groups = this.props.groups.map((group,i)=> {
       return (
-        <li key={i}>
+        <Link to="group" key={i}><li>
           <p>{group}</p>
-        </li>
+        </li></Link>
       );
     });
     return (

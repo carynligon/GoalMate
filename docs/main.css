@@ -118,7 +118,10 @@ aside {
     aside .user-groups ul {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between; }
+      justify-content: center; }
+      aside .user-groups ul a {
+        color: #00171F;
+        text-decoration: none; }
       aside .user-groups ul li {
         align-items: center;
         background: #fff;
@@ -127,15 +130,12 @@ aside {
         font-size: 0.8rem;
         height: 50px;
         justify-content: space-around;
-        margin-top: 10px;
+        margin: 5px;
         overflow: hidden;
         width: 50px; }
         aside .user-groups ul li:hover {
           cursor: pointer;
           opacity: 0.7; }
-        aside .user-groups ul li a {
-          color: #00171F;
-          text-decoration: none; }
 
 .user-feed-list {
   box-sizing: border-box;
@@ -261,6 +261,9 @@ aside {
     justify-content: center;
     margin: 0 auto;
     width: 400px; }
+    .profile-group-wrapper .profile-group-list a {
+      color: #00171F;
+      text-decoration: none; }
     .profile-group-wrapper .profile-group-list li {
       align-items: center;
       background: #2D7DD2;
@@ -399,6 +402,14 @@ nav {
       color: #fff;
       cursor: pointer; }
 
+@media (max-width: 600px) {
+  .edit-settings-form {
+    width: 85%; }
+    .edit-settings-form div {
+      width: 100%; } }
+@media (max-width: 600px) {
+  .edit-settings-form h3 {
+    font-size: 1.5rem; } }
 body {
   color: #00171F;
   margin: 0; }

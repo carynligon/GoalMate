@@ -8,7 +8,7 @@ class GroupSidebar extends React.Component {
   render() {
     console.log(this.props);
     let members = this.props.group.members.map((member,i) => {
-      return (<li key={i}><Link to="/user">{member}</Link></li>);
+      return (<Link to="user" key={i}><li>{member}</li></Link>);
     });
     return (
       <aside>

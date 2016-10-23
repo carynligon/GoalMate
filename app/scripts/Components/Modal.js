@@ -3,7 +3,11 @@ import React from 'react';
 class Modal extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    if (document.body.scrollWidth <= 520) {
+      this.state = {smallModal: true};
+    } else {
+      this.state = {smallModal: false};
+    }
   }
   closeModal(e) {
     if (e.target.className === 'modal-container') {
@@ -53,8 +57,20 @@ class Modal extends React.Component {
       margin: '20% auto'
     });
   }
+  smallContentStyles() {
+    return ({
+      position: 'relative',
+      height: '50%',
+      width: '90%',
+      background: '#F45D01',
+      margin: '20% auto'
+    });
+  }
   render() {
-    console.log(this.props);
+    let style = this.contentStyles();
+    if (this.state.smallModal) {
+      style = this.smallContentStyles();
+    }
     let form = (
       <form className="signup-form" onSubmit={this.signup.bind(this)}>
 
@@ -132,7 +148,7 @@ class Modal extends React.Component {
     }
     return (
       <div className="modal-container" style={this.containerStyles()} onClick={this.closeModal.bind(this)}>
-        <div className="modal-content" style={this.contentStyles()}>
+        <div className="modal-content" style={style}>
           {form}
         </div>
       </div>
