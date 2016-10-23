@@ -55,3 +55,34 @@
     width: 100%;
   }
 }
+
+@media (max-width: 800px) {
+  .home {
+    h1 {
+      font-size: 6rem;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .home {
+    .title-wrapper {
+      width: 80%;
+    }
+    h1 {
+      font-size: 5rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    .title-wrapper {
+      padding: 3rem 2rem;
+      width: 75%;
+    }
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+}

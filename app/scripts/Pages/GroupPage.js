@@ -38,7 +38,7 @@ class GroupPage extends React.Component {
       <main>
         <Nav/>
         <GroupSidebar group={this.state.group}/>
-        <Feed feed={this.state.feed}/>
+        <Feed feed={this.state.feed} newPosts={true}/>
       </main>
     );
   }

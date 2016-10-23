@@ -24,6 +24,10 @@
         border-radius: 5px;
         padding: 0.5rem;
         width: 100%;
+        &:focus {
+          border: 4px solid $tertiaryColor;
+          outline: none;
+        }
       }
     }
     button {
@@ -32,10 +36,11 @@
       color: $primaryColor;
       margin-top: 20px;
       padding: 0.5rem 1rem;
-      &:hover {
+      &:hover, &:focus {
         background: darken($primaryColor, 5%);
         color: $white;
         cursor: pointer;
+        outline: none;
       }
     }
   }
@@ -56,5 +61,20 @@
   }
   .add-goal {
     padding-top: 22%;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    .login-form, .signup-form, .add-goal {
+      width: 95%;
+    }
+    .signup-form {
+      .input-wrapper {
+        input {
+          width: 85%;
+        }
+      }
+    }
   }
 }

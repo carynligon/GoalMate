@@ -17,6 +17,7 @@ class Feed extends React.Component {
   render() {
     let yesChecked = false;
     let noChecked = false;
+    let textBox;
     if (this.state.rsvp) {
       if (this.state.rsvp === 'yes') {
         yesChecked = true;
@@ -49,6 +50,18 @@ class Feed extends React.Component {
           )
         }
       }
+      if (this.props.newPosts) {
+        textBox = (
+          <form className="new-post-form">
+            <textarea placeholder="Know of an event or have any advice for other members?"></textarea>
+            <input type="radio" id="type-tip" name="type" value="Tip" ref="tip"/>
+            <label htmlFor="type-tip">Tip</label>
+            <input type="radio" id="type-event" name="type" value="Event" ref="event"/>
+            <label htmlFor="type-event">Event</label>
+            <button type="submit">POST</button>
+          </form>
+        );
+      }
       return (
         <li key={i}>
           <p>{post.content}</p>
@@ -60,6 +73,8 @@ class Feed extends React.Component {
     });
     return (
       <ul className="user-feed-list">
+        <h4>What's happening:</h4>
+        {textBox}
         {feedItems}
       </ul>
     );
