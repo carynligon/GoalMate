@@ -25,7 +25,7 @@ class Nav extends React.Component {
         <ul className="nav-dropdown">
           <Link to="user"><li>Profile</li></Link>
           <li onClick={this.showModal.bind(this)}>Add Goal</li>
-          <li>Settings</li>
+          <Link to="settings"><li>Settings</li></Link>
           <li>Logout</li>
         </ul>
       );
