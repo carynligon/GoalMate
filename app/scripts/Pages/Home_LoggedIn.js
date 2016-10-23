@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Nav from '../Components/Nav';
 import UserSidebar from '../Components/UserSidebar';
 import Feed from '../Components/Feed';
 
@@ -45,6 +46,7 @@ class HomeLoggedIn extends React.Component {
   render() {
     return (
       <main>
+        <Nav/>
         <UserSidebar user={this.state.user} groups={this.state.userGroups}/>
         <Feed feed={this.state.userFeed}/>
       </main>

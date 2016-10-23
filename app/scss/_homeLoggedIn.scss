@@ -111,3 +111,21 @@ aside {
     }
   }
 }
+
+@media (min-width: 1000px) {
+  .user-feed-list {
+    padding: 2rem 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .user-feed-list {
+    padding: 2rem 8%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .user-feed-list {
+    padding: 2rem 10%;
+  }
+}

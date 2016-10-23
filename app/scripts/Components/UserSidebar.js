@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class UserSidebar extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class UserSidebar extends React.Component {
     return (
       <aside>
         <div className="user-icon">
-          <img src="/assets/images/user-icon.png"/>
+          <Link to="/user"><img src="/assets/images/user-icon.png"/></Link>
         </div>
         <h4>{this.props.user.first_name} {this.props.user.last_name}</h4>
         <p>{this.props.user.city}</p>

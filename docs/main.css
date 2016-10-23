@@ -179,6 +179,15 @@ aside {
     margin-left: 5px;
     padding: 0.5rem; }
 
+@media (min-width: 1000px) {
+  .user-feed-list {
+    padding: 2rem 5%; } }
+@media (min-width: 1200px) {
+  .user-feed-list {
+    padding: 2rem 8%; } }
+@media (min-width: 1400px) {
+  .user-feed-list {
+    padding: 2rem 10%; } }
 .user-profile-info {
   margin-top: 3rem; }
   .user-profile-info .user-icon-wrapper {
@@ -236,6 +245,12 @@ aside {
       width: 50px; }
       .profile-group-wrapper .profile-group-list li:hover {
         cursor: pointer; }
+
+nav {
+  background: #f7f6f6;
+  box-shadow: 3px 3px 3px rgba(0, 23, 31, 0.2);
+  height: 100px;
+  width: 100%; }
 
 body {
   margin: 0; }
