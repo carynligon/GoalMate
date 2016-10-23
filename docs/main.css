@@ -250,7 +250,37 @@ nav {
   background: #f7f6f6;
   box-shadow: 3px 3px 3px rgba(0, 23, 31, 0.2);
   height: 100px;
+  padding: 0 2rem;
   width: 100%; }
+  nav a {
+    color: #2D7DD2;
+    font-size: 4rem;
+    line-height: 100px;
+    transition: all 0.5s;
+    vertical-align: middle; }
+    nav a:hover {
+      color: #F45D01; }
+  nav .user-icon {
+    color: #F45D01;
+    float: right;
+    font-size: 1.5rem;
+    line-height: 100px;
+    margin-right: 6%;
+    vertical-align: middle; }
+    nav .user-icon:hover {
+      color: #2D7DD2;
+      cursor: pointer; }
+  nav .nav-dropdown {
+    background: #f7f6f6;
+    position: absolute;
+    right: 7px;
+    z-index: 5; }
+    nav .nav-dropdown li {
+      border-bottom: 1px solid #c7c0c0;
+      padding: 1rem 3rem; }
+      nav .nav-dropdown li:hover {
+        background: #F45D01;
+        cursor: pointer; }
 
 body {
   margin: 0; }
