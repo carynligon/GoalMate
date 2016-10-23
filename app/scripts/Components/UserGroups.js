@@ -5,8 +5,20 @@ class UserGroups extends React.Component {
     super(props)
   }
   render() {
+    let groups = this.props.groups.map((group,i)=> {
+      return (
+        <li key={i}>
+          <p>{group}</p>
+        </li>
+      );
+    });
     return (
-      <ul></ul>
+      <div className="profile-group-wrapper">
+        <h5>My Groups:</h5>
+        <ul className="profile-group-list">
+          {groups}
+        </ul>
+      </div>
     );
   }
 }
