@@ -16,21 +16,21 @@ class GroupPage extends React.Component {
       },
       feed: [
         {
-          content: 'Something to go in the feed here',
+          content: 'I just started a new class on learnchinese.com, you guys should check it out!',
           type: 'tip',
-          user: 'Tom',
+          user_id: 'Tom',
           timestamp: new Date()
         },
         {
-          content: 'Something to go in the feed here',
+          content: 'There\'s a meetup tonight at Capital Factory for intro to learning Chinese. Anybody going?',
           type: 'event',
-          user: 'Tommy',
+          user_id: 'Tommy',
           timestamp: new Date()
         },
         {
-          content: 'Something to go in the feed here',
+          content: 'I just found this translator and it seems to be pretty accurate.',
           type: 'tip',
-          user: 'Tomison',
+          user_id: 'Tomison',
           timestamp: new Date()
         }
       ]

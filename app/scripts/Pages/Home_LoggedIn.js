@@ -19,24 +19,24 @@ class HomeLoggedIn extends React.Component {
       userGroups: ['JavaScript', 'Yoga', 'Chinese', 'Cooking', 'JavaScript', 'Yoga', 'Chinese', 'Cooking'],
       userFeed: [
         {
-          content: 'Something that will go in the feed!',
+          content: 'Codecademy just launched a new React class!',
           type: 'tip',
           user_id: 'Tom',
           timestamp: new Date()
         },
         {
-          content: 'Something that will go in the feed!',
+          content: 'Is anybody going to the free yoga class at Whole Foods tonight?',
           type: 'event',
           user_id: 'Tommy',
           timestamp: new Date()
         },
         {
-          content: 'Something that will go in the feed!',
+          content: 'Tomison just joined the Cooking group!',
           user_id: 'Tomison',
           timestamp: new Date()
         },
         {
-          content: 'Something that will go in the feed!',
+          content: 'Tomithy just joined the Yoga group!',
           user_id: 'Tomithy',
           timestamp: new Date()
         }
