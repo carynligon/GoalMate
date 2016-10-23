@@ -31,7 +31,7 @@ class Feed extends React.Component {
       let time = Moment(post.timestamp).from();
       let actions;
       if (post.type) {
-        if (post.type === 'Tip') {
+        if (post.type === 'tip') {
           actions = (<button className="like-btn">like</button>)
         } else {
           actions = (
@@ -51,7 +51,7 @@ class Feed extends React.Component {
       }
       return (
         <li key={i}>
-          <p>{post.comment}</p>
+          <p>{post.content}</p>
           <span className="post-time">{time}</span>
           <span className="post-user"> by {post.user_id}</span>
           {actions}
