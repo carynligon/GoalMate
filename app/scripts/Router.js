@@ -10,7 +10,7 @@ const router = (
   <Router history={browserHistory}>
     <Route path="/" component={Home}/>
     <Route path="/user" component={UserProfile}/>
-    <Route path="/group" component={GroupPage}/>
+    <Route path="group" component={GroupPage}/>
   </Router>
 );
 
