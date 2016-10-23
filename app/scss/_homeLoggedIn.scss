@@ -95,7 +95,7 @@ aside {
       display: inline-block;
       margin-left: 10px;
       transition: all 0.4s;
-      &:hover {
+      &:hover, &:focus {
         background: darken($primaryColor, 10%);
       }
     }
@@ -123,10 +123,12 @@ aside {
     font-size: 1rem;
     margin-top: 5px;
     padding: 0.2rem 0.5rem;
-    &:hover {
+    &:hover, &:focus {
       background: $primaryColor;
+      border: 0;
       color: $white;
       cursor: pointer;
+      outline: 0;
       transition: all 0.5s;
     }
   }
@@ -162,6 +164,10 @@ aside {
       display: inline-block;
       margin-left: 5px;
       padding: 0.5rem;
+      &:hover, &:focus {
+        border: 0;
+        outline: 0;
+      }
     }
   }
 }

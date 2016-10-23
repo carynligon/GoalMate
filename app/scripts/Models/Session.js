@@ -4,15 +4,15 @@ import {browserHistory} from 'react-router';
 import store from '../store';
 
 const Session = Backbone.Model.extend({
-  urlRoot: ``,
+  urlRoot: `/login`,
   logout: function() {
     this.save(null, {
-      url: ``});
+      url: `/logout`});
     this.clear();
     localStorage.clear();
     browserHistory.push('/');
   },
-  signup: function(email, password) {
+  signup: function(info) {
   return new Promise((resolve, reject) => {
     localStorage.clear();
     store.users.create({
