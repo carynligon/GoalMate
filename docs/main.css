@@ -122,6 +122,7 @@ aside {
       aside .user-groups ul li {
         align-items: center;
         background: #fff;
+        border-radius: 5px;
         display: flex;
         font-size: 0.8rem;
         height: 50px;
@@ -191,6 +192,17 @@ aside {
     margin-left: 5px;
     padding: 0.5rem; }
 
+@media (max-width: 700px) {
+  aside {
+    height: 400px;
+    overflow: scroll;
+    width: 100%; }
+    aside ul {
+      margin: 0 auto;
+      width: 240px; }
+
+  .user-feed-list {
+    width: 100%; } }
 @media (min-width: 1000px) {
   .user-feed-list {
     padding: 2rem 5%; } }
@@ -201,7 +213,7 @@ aside {
   .user-feed-list {
     padding: 2rem 10%; } }
 .user-profile-info {
-  margin-top: 3rem; }
+  padding-top: 3rem; }
   .user-profile-info .user-icon-wrapper {
     border-radius: 25%;
     height: 200px;
@@ -210,7 +222,7 @@ aside {
     width: 200px; }
     .user-profile-info .user-icon-wrapper img {
       background: #fff;
-      border-radius: 50%;
+      border-radius: 20px;
       height: 100%;
       object-fit: contain;
       width: 100%; }
@@ -220,7 +232,7 @@ aside {
     margin: 0 auto;
     padding: 1rem;
     text-align: center;
-    width: 70%; }
+    width: 85%; }
     .user-profile-info .user-info h3 {
       font-size: 3rem;
       margin: 0; }
@@ -235,7 +247,7 @@ aside {
     content: '';
     display: block;
     margin: 2rem auto 1rem auto;
-    width: 600px; }
+    width: 70%; }
 
 .profile-group-wrapper {
   margin-top: 3rem; }
@@ -246,18 +258,34 @@ aside {
   .profile-group-wrapper .profile-group-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
-    width: 600px; }
+    width: 400px; }
     .profile-group-wrapper .profile-group-list li {
+      align-items: center;
       background: #2D7DD2;
+      border-radius: 5px;
       display: flex;
+      font-size: 0.8rem;
       height: 50px;
-      margin-top: 10px;
+      justify-content: center;
+      margin: 10px;
+      overflow: hidden;
+      text-align: center;
       width: 50px; }
       .profile-group-wrapper .profile-group-list li:hover {
-        cursor: pointer; }
+        cursor: pointer;
+        opacity: 0.6; }
 
+@media (max-width: 400px) {
+  .profile-group-wrapper .profile-group-list {
+    width: 85%; }
+
+  .user-profile-info .user-icon-wrapper {
+    height: 150px;
+    width: 150px; }
+  .user-profile-info .user-info h3 {
+    font-size: 2.5rem; } }
 nav {
   background: #f7f6f6;
   box-shadow: 3px 3px 3px rgba(0, 23, 31, 0.2);
@@ -282,7 +310,7 @@ nav {
       cursor: pointer; }
   nav .nav-dropdown {
     background: #f7f6f6;
-    height: 208px;
+    height: 194px;
     position: absolute;
     right: 7px;
     z-index: 5;
@@ -305,10 +333,12 @@ nav {
         cursor: pointer; }
 
 @keyframes dropdown {
-  from {
+  0% {
     height: 0; }
-  to {
-    height: 208px; } }
+  70% {
+    height: 205px; }
+  100% {
+    height: 194px; } }
 @keyframes dropdownLI {
   from {
     opacity: 0; }
@@ -370,6 +400,7 @@ nav {
       cursor: pointer; }
 
 body {
+  color: #00171F;
   margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {

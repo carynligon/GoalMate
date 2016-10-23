@@ -13,7 +13,7 @@ class GroupSidebar extends React.Component {
     return (
       <aside>
         <div className="group-icon">
-          <Link to="/group"><img src="/assets/images/user-icon.png"/></Link>
+          <Link to="group"><img src="/assets/images/user-icon.png"/></Link>
         </div>
         <h4>{this.props.group.name}</h4>
         <p>{this.props.group.members.length} Members</p>

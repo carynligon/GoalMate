@@ -32,6 +32,7 @@ aside {
       li {
         align-items: center;
         background: $white;
+        border-radius: 5px;
         display: flex;
         font-size: 0.8rem;
         height: 50px;
@@ -118,6 +119,21 @@ aside {
       margin-left: 5px;
       padding: 0.5rem;
     }
+  }
+}
+
+@media (max-width: 700px) {
+  aside {
+    height: 400px;
+    overflow: scroll;
+    width: 100%;
+    ul {
+      margin: 0 auto;
+      width: 240px;
+    }
+  }
+  .user-feed-list {
+    width: 100%;
   }
 }
 
