@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Nav from '../Components/Nav';
 import UserInfo from '../Components/UserInfo';
 import UserGroups from '../Components/UserGroups';
 
@@ -22,6 +23,7 @@ class UserProfile extends React.Component {
   render() {
     return (
       <main>
+        <Nav/>
         <UserInfo user={this.state.user}/>
         <UserGroups groups={this.state.userGroups}/>
       </main>
