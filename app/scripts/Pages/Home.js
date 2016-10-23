@@ -18,6 +18,15 @@ class Home extends React.Component {
     this.setState({showModal: !this.state.showModal, login: false});
   }
   render () {
+    console.log(this.state);
+    let modal;
+    if (this.state.showModal) {
+      if (this.state.login) {
+        modal = <Modal method='login' closeModal={this.closeModal.bind(this)}/>
+      } else {
+        modal = <Modal method="signup" closeModal={this.closeModal.bind(this)}/>
+      }
+    }
     let content = (
       <main className="home">
         <div className="title-wrapper">
@@ -31,14 +40,6 @@ class Home extends React.Component {
         {modal}
       </main>
     );
-    let modal;
-    if (this.state.showModal) {
-      if (this.state.login) {
-        modal = <Modal method='login' closeModal={this.closeModal.bind(this)}/>
-      } else {
-        modal = <Modal method="signup" closeModal={this.closeModal.bind(this)}/>
-      }
-    }
     if (this.state.loggedIn) {
       content = <HomeLoggedIn/>
     }

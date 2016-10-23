@@ -57,6 +57,32 @@ aside {
   float: right;
   padding: 2rem;
   width: calc(100% - 300px);
+  .new-post-form {
+    width: 75%;
+    textarea {
+      border-radius: 5px;
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: 0.9rem;
+      padding: 0.5rem;
+      width: 100%;
+      &:focus {
+        border: 4px solid $primaryColor;
+        outline: none;
+      }
+    }
+    button {
+      background: $primaryColor;
+      color: $white;
+      padding: 0.5rem;
+      display: inline-block;
+      margin-left: 10px;
+      transition: all 0.4s;
+      &:hover {
+        background: darken($primaryColor, 10%);
+      }
+    }
+  }
   li {
     background: $lightGray;
     border-bottom: 1px solid darken($lightGray, 5%);
@@ -134,6 +160,10 @@ aside {
   }
   .user-feed-list {
     width: 100%;
+    .new-post-form {
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 }
 

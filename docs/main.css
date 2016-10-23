@@ -45,6 +45,20 @@
   left: 0;
   width: 100%; }
 
+@media (max-width: 800px) {
+  .home h1 {
+    font-size: 6rem; } }
+@media (max-width: 650px) {
+  .home .title-wrapper {
+    width: 80%; }
+  .home h1 {
+    font-size: 5rem; } }
+@media (max-width: 500px) {
+  .home .title-wrapper {
+    padding: 3rem 2rem;
+    width: 75%; }
+  .home h1 {
+    font-size: 3.5rem; } }
 .modal-content {
   box-sizing: border-box;
   padding: 3rem 1rem; }
@@ -69,16 +83,20 @@
         border-radius: 5px;
         padding: 0.5rem;
         width: 100%; }
+        .modal-content .login-form .input-wrapper input:focus, .modal-content .signup-form .input-wrapper input:focus, .modal-content .add-goal .input-wrapper input:focus {
+          border: 4px solid #AAD922;
+          outline: none; }
     .modal-content .login-form button, .modal-content .signup-form button, .modal-content .add-goal button {
       background: #fff;
       border: none;
       color: #F45D01;
       margin-top: 20px;
       padding: 0.5rem 1rem; }
-      .modal-content .login-form button:hover, .modal-content .signup-form button:hover, .modal-content .add-goal button:hover {
+      .modal-content .login-form button:hover, .modal-content .login-form button:focus, .modal-content .signup-form button:hover, .modal-content .signup-form button:focus, .modal-content .add-goal button:hover, .modal-content .add-goal button:focus {
         background: #db5301;
         color: #fff;
-        cursor: pointer; }
+        cursor: pointer;
+        outline: none; }
   .modal-content .login-form {
     padding-top: 14%; }
   .modal-content .signup-form {
@@ -92,6 +110,11 @@
   .modal-content .add-goal {
     padding-top: 22%; }
 
+@media (max-width: 600px) {
+  .modal-content .login-form, .modal-content .signup-form, .modal-content .add-goal {
+    width: 95%; }
+  .modal-content .signup-form .input-wrapper input {
+    width: 85%; } }
 aside {
   background: #2D7DD2;
   display: inline-block;
@@ -142,6 +165,27 @@ aside {
   float: right;
   padding: 2rem;
   width: calc(100% - 300px); }
+  .user-feed-list .new-post-form {
+    width: 75%; }
+    .user-feed-list .new-post-form textarea {
+      border-radius: 5px;
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: 0.9rem;
+      padding: 0.5rem;
+      width: 100%; }
+      .user-feed-list .new-post-form textarea:focus {
+        border: 4px solid #F45D01;
+        outline: none; }
+    .user-feed-list .new-post-form button {
+      background: #F45D01;
+      color: #fff;
+      padding: 0.5rem;
+      display: inline-block;
+      margin-left: 10px;
+      transition: all 0.4s; }
+      .user-feed-list .new-post-form button:hover {
+        background: #c14a01; }
   .user-feed-list li {
     background: #f7f6f6;
     border-bottom: 1px solid #ebe9e9;
@@ -202,7 +246,10 @@ aside {
       width: 240px; }
 
   .user-feed-list {
-    width: 100%; } }
+    width: 100%; }
+    .user-feed-list .new-post-form {
+      margin: 0 auto;
+      text-align: center; } }
 @media (min-width: 1000px) {
   .user-feed-list {
     padding: 2rem 5%; } }
