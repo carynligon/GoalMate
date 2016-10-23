@@ -2,5 +2,42 @@ nav {
   background: $lightGray;
   box-shadow: 3px 3px 3px rgba($black, 0.2);
   height: 100px;
+  padding: 0 2rem;
   width: 100%;
+  a {
+    color: $secondaryColor;
+    font-size: 4rem;
+    line-height: 100px;
+    transition: all 0.5s;
+    vertical-align: middle;
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+  .user-icon {
+    color: $primaryColor;
+    float: right;
+    font-size: 1.5rem;
+    line-height: 100px;
+    margin-right: 6%;
+    vertical-align: middle;
+    &:hover {
+      color: $secondaryColor;
+      cursor: pointer;
+    }
+  }
+  .nav-dropdown {
+    background: $lightGray;
+    position: absolute;
+    right: 7px;
+    z-index: 5;
+    li {
+      border-bottom: 1px solid darken($lightGray, 20%);
+      padding: 1rem 3rem;
+      &:hover {
+        background: $primaryColor;
+        cursor: pointer;
+      }
+    }
+  }
 }
