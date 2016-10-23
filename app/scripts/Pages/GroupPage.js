@@ -1,7 +1,8 @@
 import React from 'react';
 
+import Nav from '../Components/Nav';
 import GroupSidebar from '../Components/GroupSidebar';
-import GroupFeed from '../Components/GroupFeed';
+import Feed from '../Components/Feed';
 
 class GroupPage extends React.Component {
   constructor(props) {
@@ -10,9 +11,9 @@ class GroupPage extends React.Component {
   componentWillMount() {
     this.setState({
       group: {
-        name: 'Chinese'
+        name: 'Chinese',
+        members: ['Caryn', 'Jess', 'David', 'Kim', 'Carlos']
       },
-      members: ['Caryn', 'Jess', 'David', 'Kim', 'Carlos'],
       feed: [
         {
           content: 'Something to go in the feed here',
@@ -35,8 +36,9 @@ class GroupPage extends React.Component {
   render() {
     return (
       <main>
-        <GroupSidebar/>
-        <GroupFeed/>
+        <Nav/>
+        <GroupSidebar group={this.state.group}/>
+        <Feed feed={this.state.feed}/>
       </main>
     );
   }
