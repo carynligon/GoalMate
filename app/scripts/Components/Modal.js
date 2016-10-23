@@ -18,13 +18,16 @@ class Modal extends React.Component {
   }
   login(e) {
     e.preventDefault();
+    this.props.closeModal();
     let loginInfo = {
       email: this.refs.email.value,
       password: this.refs.password.value
     }
+    // store.session.save(loginInfo);
   }
   signup(e) {
     e.preventDefault();
+    this.props.closeModal();
     let signupInfo = {
       first_name: this.refs.firstName.value,
       last_name: this.refs.lastName.value,
@@ -32,13 +35,15 @@ class Modal extends React.Component {
       email: this.refs.email.value,
       password: this.refs.password.value
     }
+    // store.session.signup(signupInfo);
   }
   newGoal(e) {
     e.preventDefault();
+    this.props.closeModal();
     let goal = {
       goal: this.refs.goal.value
     }
-    store.groups.newgoal(goal);
+    // store.groups.newgoal(goal);
   }
   containerStyles() {
     return ({

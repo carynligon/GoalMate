@@ -197,7 +197,7 @@ aside {
       display: inline-block;
       margin-left: 10px;
       transition: all 0.4s; }
-      .user-feed-list .new-post-form button:hover {
+      .user-feed-list .new-post-form button:hover, .user-feed-list .new-post-form button:focus {
         background: #c14a01; }
   .user-feed-list li {
     background: #f7f6f6;
@@ -219,10 +219,12 @@ aside {
     font-size: 1rem;
     margin-top: 5px;
     padding: 0.2rem 0.5rem; }
-    .user-feed-list button:hover {
+    .user-feed-list button:hover, .user-feed-list button:focus {
       background: #F45D01;
+      border: 0;
       color: #fff;
       cursor: pointer;
+      outline: 0;
       transition: all 0.5s; }
   .user-feed-list .rsvp-form .checkbox-wrapper {
     border: 1px solid #F45D01;
@@ -249,6 +251,9 @@ aside {
     display: inline-block;
     margin-left: 5px;
     padding: 0.5rem; }
+    .user-feed-list .rsvp-form button:hover, .user-feed-list .rsvp-form button:focus {
+      border: 0;
+      outline: 0; }
 
 @media (max-width: 700px) {
   aside {

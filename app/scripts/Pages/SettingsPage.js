@@ -19,7 +19,6 @@ class SettingsPage extends React.Component {
       zipcode: this.refs.zipcode.value,
       image: this.state.image
     }
-    console.log(data);
   }
   componentWillMount() {
     this.setState({

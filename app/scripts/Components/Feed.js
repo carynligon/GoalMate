@@ -16,6 +16,15 @@ class Feed extends React.Component {
   }
   newPost(e) {
     e.preventDefault();
+    let type;
+    if (document.getElementById('type-event').checked) {
+      type = 'Event'
+    } else {type = 'Tip'}
+    let post = {
+      content: document.getElementById('post-textbox').textContent,
+      type: type
+    }
+    store.posts.newPost();
   }
   render() {
     let yesChecked = false;
@@ -58,7 +67,7 @@ class Feed extends React.Component {
       if (this.props.newPosts) {
         textBox = (
           <form className="new-post-form" onSubmit={this.newPost.bind(this)}>
-            <textarea placeholder="Know of an event or have any advice for other members?"></textarea>
+            <textarea id="post-textbox" placeholder="Know of an event or have any advice for other members?"></textarea>
             <input type="radio" id="type-tip" name="type" value="Tip" ref="tip"/>
             <label htmlFor="type-tip">Tip</label>
             <input type="radio" id="type-event" name="type" value="Event" ref="event"/>
