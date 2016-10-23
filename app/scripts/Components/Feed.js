@@ -21,6 +21,7 @@ class Feed extends React.Component {
     let yesChecked = false;
     let noChecked = false;
     let textBox;
+    let banner;
     let heading = 'What\'s happening:';
     if (this.state.rsvp) {
       if (this.state.rsvp === 'yes') {
@@ -65,22 +66,23 @@ class Feed extends React.Component {
             <button type="submit">POST</button>
           </form>
         );
-        heading = 'What\'s happening in this group:'
+        heading = 'What\'s happening in this group:';
+        banner = (<div className="group-banner">
+          <h2>{this.props.group.name}</h2>
+        </div>);
       }
       return (
         <li key={i}>
           <p>{post.content}</p>
           <span className="post-time">{time}</span>
-          <span className="post-user"> by {post.user}</span>
+          <span className="post-user"> by {post.user_id}</span>
           {actions}
         </li>
       );
     });
     return (
       <div className="feed-wrapper">
-        <div className="group-banner">
-          <h2>{this.props.group.name}</h2>
-        </div>
+        {banner}
         <ul className="user-feed-list">
             <h4>{heading}</h4>
             {textBox}
