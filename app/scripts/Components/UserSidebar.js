@@ -8,7 +8,7 @@ class UserSidebar extends React.Component {
   render() {
     console.log(this.props);
     let groups = this.props.groups.map((group,i) => {
-      return (<li key={i}>{group}</li>);
+      return (<li key={i}><Link to="/group">{group}</Link></li>);
     });
     return (
       <aside>
