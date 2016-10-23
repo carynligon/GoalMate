@@ -26,7 +26,7 @@ nav {
   }
   .nav-dropdown {
     background: $lightGray;
-    height: 208px;
+    height: 194px;
     position: absolute;
     right: 7px;
     z-index: 5;
@@ -55,11 +55,14 @@ nav {
 }
 
 @keyframes dropdown {
-  from {
+  0% {
     height: 0;
   }
-  to {
-    height: 208px;
+  70% {
+    height: 205px;
+  }
+  100% {
+    height: 194px
   }
 }
 
