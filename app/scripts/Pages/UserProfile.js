@@ -23,7 +23,7 @@ class UserProfile extends React.Component {
     return (
       <main>
         <UserInfo user={this.state.user}/>
-        <UserGroups user={this.state.userGroups}/>
+        <UserGroups groups={this.state.userGroups}/>
       </main>
     );
   }
