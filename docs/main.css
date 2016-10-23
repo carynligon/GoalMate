@@ -314,6 +314,61 @@ nav {
     opacity: 0; }
   to {
     opacity: 1; } }
+.edit-settings-form {
+  background: #fff;
+  margin: 1rem auto;
+  padding: 2rem 0;
+  text-align: center;
+  width: 500px; }
+  .edit-settings-form h3 {
+    color: #00171F;
+    font-size: 2rem;
+    margin: 0; }
+  .edit-settings-form label {
+    display: block;
+    font-size: 0.8rem; }
+  .edit-settings-form #image-label {
+    background: #fff;
+    border: 1px solid rgba(0, 23, 31, 0.2);
+    margin: 23px auto;
+    padding: 0.5rem;
+    width: 60%; }
+    .edit-settings-form #image-label:hover, .edit-settings-form #image-label:active {
+      background: #c14a01;
+      color: #fff;
+      cursor: pointer; }
+    .edit-settings-form #image-label p {
+      color: #fff;
+      margin: 0; }
+  .edit-settings-form #image-label.loaded {
+    background: #c14a01;
+    color: #fff; }
+  .edit-settings-form div {
+    margin: 10px auto;
+    width: 90%; }
+    .edit-settings-form div::first-child {
+      margin-top: 0; }
+    .edit-settings-form div input {
+      padding: 0.5rem;
+      width: 60%; }
+      .edit-settings-form div input:focus {
+        border: 1px solid rgba(0, 23, 31, 0.2);
+        outline: none; }
+    .edit-settings-form div input[type="file"] {
+      display: none; }
+  .edit-settings-form button {
+    background: #fff;
+    border: 1px solid #F45D01;
+    box-sizing: border-box;
+    color: #F45D01;
+    margin-top: 20px;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s; }
+    .edit-settings-form button:hover {
+      background: #db5301;
+      color: #fff;
+      cursor: pointer; }
+
 body {
   margin: 0; }
 

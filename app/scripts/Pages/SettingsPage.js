@@ -7,6 +7,20 @@ class SettingsPage extends React.Component {
     super(props);
     this.state = {};
   }
+  getImage(e) {
+    document.getElementById('image-label').classList.add('loaded');
+    this.setState({image: e.target.files[0]})
+  }
+  sendInfo(e) {
+    e.preventDefault();
+    let data = {
+      first_name: this.refs.name.value,
+      email: this.refs.email.value,
+      zipcode: this.refs.zipcode.value,
+      image: this.state.image
+    }
+    console.log(data);
+  }
   componentWillMount() {
     this.setState({
       user: {
@@ -18,10 +32,16 @@ class SettingsPage extends React.Component {
     });
   }
   render() {
+    let file;
+    if (this.state.image) {
+      file = this.state.image.name;
+    }
     return (
       <main>
         <Nav/>
-        <form className="edit-settings-form">
+        <form className="edit-settings-form" onSubmit={this.sendInfo.bind(this)}>
+
+          <h3>ACCOUNT SETTINGS</h3>
 
           <div className="input-wrapper">
             <label htmlFor="first-name">FIRST NAME</label>
@@ -39,8 +59,8 @@ class SettingsPage extends React.Component {
           </div>
 
         <div className="input-wrapper">
-          <label htmlFor="user-icon">IMAGE</label>
-          <input type="file" id="user-icon" ref="icon" accept="image/*"/>
+          <label htmlFor="user-icon" id="image-label">CHOOSE A NEW IMAGE<p>{file}</p></label>
+          <input type="file" id="user-icon" ref="icon" accept="image/*" onChange={this.getImage.bind(this)}/>
         </div>
 
         <button type="submit" id="submit-settings">SUBMIT</button>
